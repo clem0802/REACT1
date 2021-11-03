@@ -1,4 +1,4 @@
-// 2021.11.02 FROM (MiMO) 
+// 2021.11.02 FROM (MIMO) 
 /*----------------------------------*/
 //! REACT
 //! USING CLASS COMPONENT
@@ -29,10 +29,11 @@ class App extends React.Component {}  //! (croquis of Class Component)
 /*----------------------------------*/
 /*----------------------------------*/ (II)
 //! CLASS COMPONENT
-//! render()
+//! RENDER()
 // Class Components need an internal //!   render() FUNCTION
 // this render() function returns the JSX elements the component should create
 // render() is to print out on webpage
+// render() is to output the component's JSX
 // below, complete the render() function
 
 //?? (REACT) (script.jsx)------------------
@@ -143,7 +144,8 @@ ReactDOM.render(
 /*----------------------------------*/
 /*----------------------------------*/ (V)
 //! CLASS COMPONENT
-//! SUPER(props)
+//! constructor(props)
+//! super(props)
 // within constructor(props) we need to CALL super(props)
 // similar to how we use super() and consturctor() in NORMAL CLASSES
 
@@ -160,12 +162,13 @@ ReactDOM.render(
     </body>
 </html>
 
+
 //?? (REACT) (index.jsx)------------------
 import React from "react";
 import ReactDOM from "react-dom";
 
 class App extends React.Component {
-    constructor(props) {  //! ATTENTION
+    constructor(props) {  //! ATTENTION, this allows "App" to use "props"
         super(props);  //! ATTENTION
     } 
 
