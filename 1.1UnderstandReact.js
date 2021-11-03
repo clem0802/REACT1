@@ -31,6 +31,7 @@
 //?? (REACT) (script.jsx)------------------
 import React from "react";
 // this statement imports React into our app
+// this code import React into the script.jsx
 // type the above code line at the top of the script to gain access to REACT's various features (1)
 
 import ReactDOM from "react-dom";
