@@ -111,7 +111,7 @@ ReactDOM.render(
 /*----------------------------------*/
 /*----------------------------------*/ (V)
 //! EMBEDDED EXPRESSIONS
-// we can also use VARIABLES to insert JSX into other elements
+// we can also use VARIABLES to insert JSX elements into other elements
 // we do that with the help of EMBEDDED EXPRESSIONS
 // add the "header" inside the "div" element
 
