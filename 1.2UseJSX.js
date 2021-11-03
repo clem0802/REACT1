@@ -229,7 +229,8 @@ ReactDOM.render(
 /*----------------------------------*/
 /*----------------------------------*/ (VIII)
 //! EMBEDDED EXPRESSIONS
-// we can even use EMBEDDED EXPRESSIONS to pass values into a JSX element's ATTRIBUTES
+// we can even use EMBEDDED EXPRESSIONS to pass values into a JSX element's //! ATTRIBUTES
+// ATTRIBUTES are needed fo rin JSX, to PASS DATA to JSX elements
 //! try to INJECT "url" as the "src" of <img />
 // EMBEDDED EXPRESSIONS are a powerful tool in our React toolkit and allow for nifty interactions with our app's UI
 
