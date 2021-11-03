@@ -77,7 +77,7 @@ ReactDOM.render(
 //! VARIABLES inside JSX
 // unlike pure HTML, we can use VARIABLES inside JSX
 // this is useful in situations where we want to write JSX in one part of our code 
-// and then refer ot it somewhere else in a more readable way
+// and then refer to it somewhere else in a more readable way
 
 //?? (HTML) (index.html)------------------
 <!doctype html>
