@@ -30,10 +30,11 @@
 
 //?? (REACT) (script.jsx)------------------
 import React from "react";
+// this statement imports React into our app
 // type the above code line at the top of the script to gain access to REACT's various features (1)
 
 import ReactDOM from "react-dom";
-// also need to IMPORT a second package called ReactDOM, which will allow to render the content onto a webpage (2)
+// also need to IMPORT a second package called ReactDOM, which will allow to render (print out) the content onto a webpage (2)
 
 ReactDOM.render();
 // the ReactDOM.render() FUNCTION needs to be called first (3)
