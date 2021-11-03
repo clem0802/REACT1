@@ -1,4 +1,4 @@
-// 2021.11.02 FROM (MM) 
+// 2021.11.02 FROM (MIMO) 
 /*----------------------------------*/
 //! REACT
 //! USING FUNCTIONAL COMPONENT
@@ -9,8 +9,9 @@
 //! FUNCTIONAL COMPONENT
 // FUNCTIONAL COMPONENTs are special FUNCTIONs that return JSX elements
 // the function "App" below is a FUNCTIONAL COMPONENT
-// thses components work differently than normal JavaScript functions
+// these components work differently than normal JavaScript functions
 // functional components return individual JSX elements like a <button> or <p> element
+// they specifically return JSX elemetns
 // we can write functional components with :
 //! (1) the normal function() syntax or 
 //! (2) the ES6 arrow function ()=>{} syntax
@@ -32,6 +33,10 @@ const App = () => {
 //! FUNCTIONAL COMPONENT
 // now we have created a functional component, we can //! RENDER it with JSX markup
 // to render the "App" component, code //!  <App />
+// React applications normally name their topmost component as "App"
+// it's usually the starting point of a React app
+// with which method can we pass data into a component rendered with JSX, such as <App />   ?
+//! => we use JSX ATTRIBUTES
 
 //?? (REACT) (script.jsx)------------------
 const App = () => {
@@ -71,7 +76,7 @@ var element = <App name = "Sarah Smith" />;  //!
 /*----------------------------------*/ (IV)
 //! FUNCTIONAL COMPONENT
 //! PROPS
-// to access values passed via JSX attrkbutes, we need to add the ARGULENT "props" to the functional component
+// to access values passed via JSX attrkbutes, we need to add the ARGUMENT "props" to the functional component
 // "PROPS" is a common KEYWORD used across all components
 // all components have their own  //!  "props"
 
@@ -136,7 +141,7 @@ var element = <App name = "Sarah Smith" />;
 import React from "react";
 import ReactDOM from "react-dom";
 
-const App = (props) {  //!
+const App = (props) => {  //!
     const name = props.name;
     return (
         <div>
@@ -157,7 +162,7 @@ ReactDOM.render(
 
 /*----------------------------------*/
 /*----------------------------------*/ (VII)
-//! FUNCTIONAL COMPONENT
+//! PROP (compared with VIII, below)
 // how many JSX attributes are passed to "PROPS"?
 //! 4 
 
@@ -191,6 +196,39 @@ ReactDOM.render(   //! 4 JSX attributes are passed to "PROPS"
 
 /*----------------------------------*/
 /*----------------------------------*/ (VIII)
+//! PROP (compared with VII, above)
+// how may "prop" values is "App" using
+//! 3
+
+//?? (REACT) (script.jsx)------------------
+import React from "react";
+import ReactDOM from "react-dom";
+
+const App = (props) {  
+    return (
+        <div>
+            <h3>Query: {props.search}</h3>
+            <p>Category: {props.category}</p>
+            <p>Page: {props.page}</p>
+        </div>
+    );
+}
+
+ReactDOM.render(   //! App is using "3" PROP VALUES
+    <App 
+    search="lens"
+    category="travel"
+    skill="new_to_photography"
+    page="2"
+    />,  
+    document.getElementById("root")
+);
+
+
+
+
+/*----------------------------------*/
+/*----------------------------------*/ (IX)
 //! USE ES6 ARROW FUNCTION
 
 //?? (HTML) (index.html)------------------
@@ -229,7 +267,7 @@ ReactDOM.render(
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (IX)
+/*----------------------------------*/ (X)
 // add the JSX attribute "date" with the string value "Jan 3" <Calendar />
 
 //?? (HTML) (index.html)------------------
@@ -268,7 +306,7 @@ ReactDOM.render(
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (X)
+/*----------------------------------*/ (XI)
 
 //?? (HTML) (index.html)------------------
 <!doctype html>
@@ -283,6 +321,7 @@ ReactDOM.render(
         <div id="button"></div>  //! 
     </body>
 </html>
+
 
 //?? (REACT) (index.jsx)------------------
 import React from "react";
@@ -299,4 +338,22 @@ const CustomButton = (props) => {
 ReactDOM.render(
     <CustomButton value="Click me!" />,  // 1st ARGUMENT of ReactDOM.render()
     document.getElementById("button")  //!
+);
+
+// (OR, the REACT part could also be as following)
+//?? (REACT) (index.jsx)------------------
+import React from "react";
+import ReactDOM from "react-dom";
+
+const CustomButton = (props) => {  
+    return (
+        <button>
+            {props.text}  //! ATTENTION
+        </button>
+    );
+}
+
+ReactDOM.render(
+    <CustomButton text="Click me!" />,  //! ATTENTION
+    document.getElementById("button")  
 );
