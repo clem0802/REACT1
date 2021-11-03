@@ -1,4 +1,4 @@
-// 2021.11.02 FROM (MM) 
+// 2021.11.02 FROM (MiMO) 
 /*----------------------------------*/
 //! REACT
 //! USING CLASS COMPONENT
