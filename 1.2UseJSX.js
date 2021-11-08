@@ -1,4 +1,4 @@
-// 2021.11.01 FROM (MIMO) 
+// 2021.11.01 FROM (M) 
 /*----------------------------------*/
 //! USE REACT
 // REAcT looks different than anything we've coded before
