@@ -1,4 +1,4 @@
-// 2021.11.03 FROM (MIMO) 
+// 2021.11.03 FROM (M) 
 /*----------------------------------*/
 /*----------------------------------*/ (I) //! EXO
 // where will the React content be rendered in "index.html"?
