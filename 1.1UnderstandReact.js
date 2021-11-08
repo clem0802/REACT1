@@ -1,4 +1,4 @@
-// 2021.11.01 FROM (MIMO) 
+// 2021.11.01 FROM (M) 
 /*----------------------------------*/
 //! UNDERSTAND REACT
 // REACT = JavaScript library
