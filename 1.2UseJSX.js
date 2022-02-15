@@ -1,19 +1,20 @@
 // 2021.11.01 FROM (M) 
 /*----------------------------------*/
-//! USE REACT
-// REAcT looks different than anything we've coded before
-// that is because it uses JSX (JavaScript XML)
-// JSX is a markup syntax that combines USER INERFACE (UI) element and logic
-//! basically, JSX tells the browser WHAT to render and HOW
+// USE REACT
+-JSX use syntax "<"  ">"  similar to HTML
+-REACT looks different than anything we've coded before
+ that is because it uses "JSX (JavaScript XML)"
+-JSX is a markup syntax that combines USER INERFACE (UI) element and logic
+-Basically, JSX tells the browser "WHAT" to render and "HOW"
 
 
 /*----------------------------------*/
 /*----------------------------------*/ (I)
-//! UNDERSTAND REACT
+// UNDERSTAND REACT
 // REACT generated and then inserts HTML into a pre-existing HTML container, like a dive element, in our webpage
 // set up that container 
 // create an empty  <div id="root">  inside  index.html  file
-//! we need this HTML <div id="root"> TAG to make this React app print properly
+// we need this HTML <div id="root"> TAG to make this React app print properly
 
 //?? (HTML)------------------
 <!doctype html>
@@ -28,24 +29,20 @@
 </html>
 
 
-//?? (REACT) (script.jsx)------------------
+//?? (REACT) (index.jsx)------------------
 import React from "react";
-// type the above code line at the top of the script to gain access to REACT's various features (1)
 import ReactDOM from "react-dom";
-// also need to IMPORT a second package called ReactDOM, which will allow to render the content onto a webpage (2)
+
 ReactDOM.render(
     <h1>Hello, John</h1>,
     document.getElementById("root")
 );
-// the ReactDOM.render() FUNCTION needs to be called first (3)
-
 
 
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (II)
-//! JSX
+/*----------------------------------*/ (II) JSX
 // JSX code allows us to generate HTML tags, hence why we can add HTML-like code inside JavaScript
 // however, we have to make sure to not confuse it for either HTML or JavaScript
 // it's JSX !
@@ -54,8 +51,6 @@ ReactDOM.render(
 <p>
     This is a React Element... JSX.
 </p>
-
-
 
 
 
@@ -70,11 +65,8 @@ ReactDOM.render(
 
 
 
-
-
 /*----------------------------------*/
-/*----------------------------------*/ (IV)
-//! VARIABLES inside JSX
+/*----------------------------------*/ (IV) VARIABLES inside JSX
 // unlike pure HTML, we can use VARIABLES inside JSX
 // this is useful in situations where we want to write JSX in one part of our code 
 // and then refer to it somewhere else in a more readable way
@@ -83,7 +75,7 @@ ReactDOM.render(
 <!doctype html>
 <html>
     <head>
-    <script type="module" src="./index.js"></script>
+        <script type="module" src="./index.js"></script>
     </head>
 
     <body> 
@@ -94,7 +86,7 @@ ReactDOM.render(
 //?? (REACT) (index.jsx)------------------
 import React from "react";
 import ReactDOM from "react-dom";
-var header = (  //! VARIABLE dans JSX
+var header = (  
     <h1>
         Hello, Isaac
     </h1>
@@ -106,12 +98,18 @@ ReactDOM.render(
 
 
 
-
-
 /*----------------------------------*/
-/*----------------------------------*/ (V)
-//! EMBEDDED EXPRESSIONS
-// we can also use VARIABLES to insert JSX elements into other elements
+/*----------------------------------*/ (V) EMBEDDED EXPRESSIONS
+// JSX element here has "id", "type", "value" ATTRIBUTES
+const inputElement = (
+     <input
+      id="comment" //
+      type="text" //
+      value="" //
+     />
+);
+
+// we can also use VARIABLES to INSERT "JSX elements" into "other elements"
 // we do that with the help of EMBEDDED EXPRESSIONS
 // add the "header" inside the "div" element
 
@@ -119,8 +117,8 @@ ReactDOM.render(
 <!doctype html>
 <html>
     <head>
-    <link rel="stylesheet" href="./index.css" />
-    <script type="module" src="./index.js"></script>
+        <link rel="stylesheet" href="./index.css" />
+        <script type="module" src="./index.js"></script>
     </head>
 
     <body> 
@@ -131,9 +129,11 @@ ReactDOM.render(
 //?? (REACT) (index.jsx)------------------
 import React from "react";
 import ReactDOM from "react-dom";
-var app = (  //! add {header} inside the <div> element
+
+var header = <h1>Hello, John</h1>;
+var app = (       // add {header} inside the <div> element
     <div>
-        {header} //!
+        {header}  //
     </div>
 );
 ReactDOM.render(
@@ -144,10 +144,8 @@ ReactDOM.render(
 
 
 
-
 /*----------------------------------*/
-/*----------------------------------*/ (VI)
-//! EMBEDDED EXPRESSIONS
+/*----------------------------------*/ (VI) EMBEDDED EXPRESSIONS
 // EMBEDDED EXPRESSIONS are values wrapped in between curly braces {} inside of existing JSX elements
 // below, INSERT "subheader" into app's JSX
 
@@ -155,8 +153,8 @@ ReactDOM.render(
 <!doctype html>
 <html>
     <head>
-    <link rel="stylesheet" href="./index.css" />
-    <script type="module" src="./index.js"></script>
+        <link rel="stylesheet" href="./index.css" />
+        <script type="module" src="./index.js"></script>
     </head>
 
     <body> 
@@ -185,19 +183,18 @@ ReactDOM.render(
 
 
 
-
 /*----------------------------------*/
-/*----------------------------------*/ (VII)
-//! EMBEDDED EXPRESSIONS
-// what makes EMBEDDED EXPRESSIONS useful is that they also work with common JavaScript values such as STRINGS or BOOLEANS
+/*----------------------------------*/ (VII) EMBEDDED EXPRESSIONS
+// what makes EMBEDDED EXPRESSIONS useful is that 
+// they also work with common JavaScript values such as STRINGS or BOOLEANS
 //! below, INJECT the VARIABLE "name" into app's JSX
 
 //?? (HTML) (index.html)------------------
 <!doctype html>
 <html>
     <head>
-    <link rel="stylesheet" href="./index.css" />
-    <script type="module" src="./index.js"></script>
+        <link rel="stylesheet" href="./index.css" />
+        <script type="module" src="./index.js"></script>
     </head>
 
     <body> 
@@ -209,11 +206,10 @@ ReactDOM.render(
 import React from "react";
 import ReactDOM from "react-dom";
 
-var name = "Martin Luther"; //!
-
+var name = "Martin Luther"; //
 var app = (  
     <div>
-        <h1>Hello, {name} //!
+        <h1>Hello, {name} // Hello, Martin Luther
         </h1>
     </div>
 );
@@ -225,11 +221,9 @@ ReactDOM.render(
 
 
 
-
 /*----------------------------------*/
-/*----------------------------------*/ (VIII)
-//! EMBEDDED EXPRESSIONS
-// we can even use EMBEDDED EXPRESSIONS to pass values into a JSX element's //! ATTRIBUTES
+/*----------------------------------*/ (VIII) EMBEDDED EXPRESSIONS
+// we can even use EMBEDDED EXPRESSIONS to pass values into a JSX element's  "ATTRIBUTES"
 // ATTRIBUTES are needed fo rin JSX, to PASS DATA to JSX elements
 //! try to INJECT "url" as the "src" of <img />
 // EMBEDDED EXPRESSIONS are a powerful tool in our React toolkit and allow for nifty interactions with our app's UI
@@ -238,8 +232,8 @@ ReactDOM.render(
 <!doctype html>
 <html>
     <head>
-    <link rel="stylesheet" href="./index.css" />
-    <script type="module" src="./index.js"></script>
+        <link rel="stylesheet" href="./index.css" />
+        <script type="module" src="./index.js"></script>
     </head>
 
     <body> 
@@ -251,8 +245,7 @@ ReactDOM.render(
 import React from "react";
 import ReactDOM from "react-dom";
 
-var url = "https://mimo.app/i/lori.png";
-
+var url = "https://mimo.app/i/lori.png"; 
 var app = (  
     <div>
         <img src = {url} alt="Lori's Profile" /> //! ATTENTION !!!! inside the curly braces
@@ -266,10 +259,8 @@ ReactDOM.render(
 
 
 
-
 /*----------------------------------*/
-/*----------------------------------*/ (IX)
-//! EMBEDDED EXPRESSIONS
+/*----------------------------------*/ (IX) EMBEDDED EXPRESSIONS
 // create a VARIABLE so that the code displays the word "ON SALE"
 
 //?? (HTML) (index.html)------------------
@@ -290,12 +281,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const header = <h4> ON SALE </h4> //!
-
 ReactDOM.render(
     header, //!
     document.getElementById("root")
 );
-
 
 
 
@@ -318,11 +307,11 @@ ReactDOM.render(
 </html>
 
 //?? (REACT) (index.jsx)------------------
+// Use an Embedded Expression to make sure that "name" is rendered inside of <div>.
 import React from "react";
 import ReactDOM from "react-dom";
 
-const name = <p>Peter Parker</p> //!
-
+const name = <p>Peter Parker</p> 
 ReactDOM.render(
     <div>
         <h1>Profile</h1>
@@ -331,7 +320,6 @@ ReactDOM.render(
     </div>, 
     document.getElementById("root")
 );
-
 
 
 
@@ -364,11 +352,10 @@ import ReactDOM from "react-dom";
 
 var name = "Lori Smith";
 var url = "https://mimo.app/i/lori.png";
-
 var app = (
     <div>
-        <h1>Hello, {name}</h1>
-        <img src = {url} alt="Lori's Profile" /> //! <img src = {url} alt=   IMPORTANT !!!
+        <h1>Hello, {name}</h1> //
+        <img src = {url} alt="Lori's Profile" /> //! <img src = {url} alt=    IMPORTANT !!!
     </div>
 );
 
@@ -376,3 +363,17 @@ ReactDOM.render(
     app, 
     document.getElementById("root")
 );
+
+
+
+
+
+/*----------------------------------*/
+/*----------------------------------*/ (XII) 
+// span closing tag
+var sentence = { 
+ <span>
+  Jacklin said that she didn't know where the shop was.
+ </span>    
+};
+
