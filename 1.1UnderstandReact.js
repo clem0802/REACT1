@@ -71,7 +71,7 @@ ReactDOM.render(
 <!doctype html>
 <html>
  <head>
-  <script type="module" src="./index.jsx"></script>
+  <script type="module" src="./index.js"></script>
  </head>
  <body>
 
