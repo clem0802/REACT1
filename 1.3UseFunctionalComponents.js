@@ -195,10 +195,16 @@ ReactDOM.render(   //! 4 JSX attributes are passed to "PROPS"
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (VIII)
+/*----------------------------------*/ (VIII) (with LIVIA)
 //! PROP (compared with VII, above)
-// how may "prop" values is "App" using
-//! 3
+// how may "prop" values is "App" using => 3
+from LIVIA:
+// first we set the "TEMPLATE", then we send in the "DATA"
+// "const App" is a template, we create 3 spots for data coming in
+// "const App only has 3 attributes listed/used: {{props.search}}, {{props.category}}, {{props.page}}
+// the data is coming in via the <App atttributes, we have 4 attributes
+// but we use only 3 in the template
+// so here, 4 data attributes passed, and 3 of thems used
 
 //?? (REACT) (script.jsx)------------------
 import React from "react";
@@ -207,9 +213,9 @@ import ReactDOM from "react-dom";
 const App = (props) {  
     return (
         <div>
-            <h3>Query: {props.search}</h3>
-            <p>Category: {props.category}</p>
-            <p>Page: {props.page}</p>
+            <h3>Query: {props.search}</h3>  //=> uses the search attribute sent in via the render App
+            <p>Category: {props.category}</p>  //=> uses the category attribute sent in via the render
+            <p>Page: {props.page}</p>  //=> uses the page attribute sent in via the render App
         </div>
     );
 }
