@@ -76,7 +76,7 @@ var element = <App name = "Sarah Smith" />;  //!
 /*----------------------------------*/ (IV)
 //! FUNCTIONAL COMPONENT
 //! PROPS
-// to access values passed via JSX attrkbutes, we need to add the ARGUMENT "props" to the functional component
+// to access values passed via JSX attributes, we need to add the ARGUMENT "props" to the functional component
 // "PROPS" is a common KEYWORD used across all components
 // all components have their own  //!  "props"
 
@@ -124,7 +124,7 @@ var element = <App name = "Sarah Smith" />;
 // this App COMPONENT contains the starting point for any JSX rendered on the browser
 // code "App"
 
-//?? (HTML) (index.html)------------------
+// (HTML) (index.html)------------------
 <!doctype html>
 <html>
     <head>
@@ -137,7 +137,7 @@ var element = <App name = "Sarah Smith" />;
     </body>
 </html>
 
-//?? (REACT) (index.jsx)------------------
+// (REACT) (index.jsx)------------------
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -162,7 +162,7 @@ ReactDOM.render(
 
 /*----------------------------------*/
 /*----------------------------------*/ (VII)
-//! PROP (compared with VIII, below)
+//! PROPS (compared with VIII, below)
 // how many JSX attributes are passed to "PROPS"?
 //! 4 
 
