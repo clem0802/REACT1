@@ -1,17 +1,146 @@
 // 2021.11.02 FROM (M) 
+/*----------------------------------*/ REACT
+" USING CLASS COMPONENT "
+=> REACT apps are built with 2 TYPES of COMPONENTS:
+
+/*----------------------------------*/ (1.1) "Functional Components":
+-> are meant to render JSX and don't do anything else
+-> are special functions that return individual JSX elements, like <button> or <p>
+-> we write FC with the normal function() syntax, or the ES6 arrow function ()=>{}
+-> "props" is a common keyword used across ALL components
+-> ALL components have their own "props"
+// (JSX)
+const App = (props) => {
+     const name = "Sarah Smith"; // => const name = props.name
+     return (
+      <h1>Hello, {name}</h1>
+     );
+}
+var element = <App name="Sarah Smith" />
+    
+// (HTML)
+<!doctype html>
+<html>
+ <head>
+  <link rel="stylesheet" href="./index.css" />
+  <script type="module" src="./index.js"></script>
+ </head>
+ <body>
+  
+  <div id="root"></div>
+
+ </body>
+</html>
+   
+/*----------------------------------*/ (1.2) "Functional Components":
+// React apps usually name the topmost component as App, similar to "index.html" for websites.
+// This App component contains the starting point for any JSX rendered on the browser. Code App.
+// (JSX)
+const App = (props) => {
+     const name = props.name;
+     return (
+      <div>
+       <h1>Hello, {name}</h1>
+       <p>Welcome to my first React component!</p>
+      </div>
+     );
+}
+
+ReactDOM.render(
+  <App name="Sarah Smith" />,
+  document.getElementById('root')
+);
+
+/*----------------------------------*/ (1.3) "Functional Components":
+// Given the code below, how many JSX attributes are passed to props? => 4
+import React from "react";
+import ReactDOM from "react-dom";
+
+const App = (props) => {
+ return (
+   <div>
+    <h3>Query: {props.search}</h3>
+    <p>Category: {props.category}</p>
+    <p>Page: {props.page}</p>
+  </div>
+ );
+}
+
+ReactDOM.render(
+ <App 
+  search="lens" 
+  category="travel" 
+  skill="new_to_photography" 
+  page="2" 
+ />,
+ document.getElementById("root")
+);
+
+/*----------------------------------*/ (1.4) "Functional Components":
+import React from "react";
+import ReactDOM from "react-dom";
+
+const App = () => {
+ return (
+  <div>
+   <h1>Did You Know?</h1>
+   <p>"Supercalifragilisticexpialidocious" is NOT the longest word in the English language!</p>
+  </div>
+ );
+}
+
+ReactDOM.render(
+ <App />,
+ document.getElementById("root")
+);
+   
+/*----------------------------------*/ (1.5) "Functional Components":
+// Add the JSX attribute date with the string value "Jan 3" to <Calendar />.
+import React from "react";
+import ReactDOM from "react-dom";
+
+const Calendar = (props) => {
+ return (
+  <div>
+   <h3>Today's date is:</h3>
+   <p><strong>{props.date}</strong></p>
+  </div>
+ );
+}
+
+ReactDOM.render(
+ <Calendar date="Jan3" />,
+ document.getElementById("root")
+);
+
+/*----------------------------------*/ (1.6) "Functional Components":
+// Access the correct JSX attribute through props.
+import React from "react";
+import ReactDOM from "react-dom";
+
+const CustomButton = (props) => {
+ return (
+  <button>
+   {props.value} //
+  </button>
+ );
+}
+
+ReactDOM.render(
+ <CustomButton value="Click me!" />,
+ document.getElementById("button")
+);
+
 /*----------------------------------*/
-//! REACT
-//! USING CLASS COMPONENT
-// REACT apps are built with 2 TYPES of COMPONENTS
-//! "Functional Components" => are meant to render JSX and don't do anything else
-//! "Class Components" => are meant to work for more complicated behavior when needed
+-(2) "Class Components":
+     -> are meant to work for more complicated behavior when needed
 
 
 
+     
 /*----------------------------------*/
-/*----------------------------------*/ (I)
-//! CLASS COMPONENT
-//! extends React.Component
+/*----------------------------------*/ (I) CLASS COMPONENT
+extends React.Component
 // creating Class Components is similar to creating JavaScript CLASSES
 // Class Components are CLASSES that store DATA over time
 // finish the code below by adding //!  extends React.Component
@@ -25,11 +154,9 @@ class App extends React.Component {}  //! (croquis of Class Component)
 
 
 
-
 /*----------------------------------*/
-/*----------------------------------*/ (II)
-//! CLASS COMPONENT
-//! RENDER()
+/*----------------------------------*/ (II) CLASS COMPONENT
+render()
 // Class Components need an internal //!   render() FUNCTION
 // this render() function returns the JSX elements the component should create
 // render() is to print out on webpage
@@ -59,11 +186,9 @@ ReactDOM.render(
 
 
 
-
 /*----------------------------------*/
-/*----------------------------------*/ (III)
-//! CLASS COMPONENT
-//! render()
+/*----------------------------------*/ (III) CLASS COMPONENT
+render()
 // within constructor(props) we need to CALL super(props)
 // similar to how we use super() and consturctor() in NORMAL CLASSES
 
@@ -107,11 +232,9 @@ ReactDOM.render(
 
 
 
-
 /*----------------------------------*/
-/*----------------------------------*/ (IV)
-//! CLASS COMPONENT
-//! CONSTRUCTOR(props) {}
+/*----------------------------------*/ (IV) CLASS COMPONENT
+constructor(props) {}
 // render() doesn't accept any arguments, so we cannot pass "props" to it like with Functional Components
 // instead, we need to pass "props" through a "constructor()" FUNCTION first
 
@@ -140,11 +263,9 @@ ReactDOM.render(
 
 
 
-
 /*----------------------------------*/
-/*----------------------------------*/ (V)
-//! CLASS COMPONENT
-//! constructor(props)
+/*----------------------------------*/ (V) CLASS COMPONENT
+constructor(props)
 //! super(props)
 // within constructor(props) we need to CALL super(props)
 // similar to how we use super() and consturctor() in NORMAL CLASSES
@@ -190,10 +311,8 @@ ReactDOM.render(
 
 
 
-
 /*----------------------------------*/
-/*----------------------------------*/ (VI)
-//! CLASS COMPONENT
+/*----------------------------------*/ (VI) CLASS COMPONENT
 // add what is necessary to allow "App" to use "props"
 
 //?? (HTML) (index.html)------------------
@@ -247,11 +366,9 @@ ReactDOM.render(
 
 
 
-
 /*----------------------------------*/
-/*----------------------------------*/ (VII)
-//! CLASS COMPONENT
-//! THIS.PROPS. =>  this.props.name
+/*----------------------------------*/ (VII) CLASS COMPONENT
+THIS.PROPS. =>  this.props.name
 // with super(props) added we can now use "props" by typing "this.props" inside the RENDER()
 // here, we can type "this.props.name" to refer to the string value "Sara Smith"
 
@@ -296,11 +413,9 @@ ReactDOM.render(
 
 
 
-
 /*----------------------------------*/
-/*----------------------------------*/ (VIII)
-//! CLASS COMPONENT
-//! THIS.PROPS. =>  this.props.name
+/*----------------------------------*/ (VIII) CLASS COMPONENT
+THIS.PROPS. =>  this.props.name
 // with 
 
 //?? (HTML) (index.html)------------------
