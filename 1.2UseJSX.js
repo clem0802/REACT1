@@ -87,10 +87,9 @@ ReactDOM.render(
 import React from "react";
 import ReactDOM from "react-dom";
 var header = (  
-    <h1>
-        Hello, Isaac
-    </h1>
+    <h1>Hello Isaac</h1>
 );
+
 ReactDOM.render(
     header,
     document.getElementById("root")
