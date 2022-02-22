@@ -33,15 +33,15 @@ REACT = a JavaScript library
 </html>
 
 
-/*----------------------------------*/ REACT (script.jsx)
+/*----------------------------------*/ (II) REACT (script.jsx)
 import React from "react";
 // this statement imports React into our app
 // this code import React into the script.jsx
 // we type this at the top of the script to gain access to REACT's various features (1)
 
 import ReactDOM from "react-dom";
-// also need to IMPORT a second package called ReactDOM, 
-// which will allow to render (print out) the content onto a webpage (2)
+// also need to IMPORT a second package called "ReactDOM", 
+// which will allow to => render (print out) the content onto a webpage (2)
 
 ReactDOM.render();
 // the ReactDOM.render() print out content into a webpage
@@ -61,12 +61,10 @@ ReactDOM.render(
 // now tell React WHERE to render it in index.html (5)
 // add document.getElementById("root"); (5)
 //! an <h1> TAG with "Hello, Isaac" is expected to render with this setup in React
-/*----------------------------------*/
 
 
 
-/*----------------------------------*/
-/*----------------------------------*/ An example:
+/*----------------------------------*/ (III) REACT (script.jsx)
 //?? (HTML)------------------
 <!doctype html>
 <html>
@@ -87,13 +85,10 @@ ReactDOM.render(
     <h1>Hello, Isaac</h1>,
     document.getElementById("root")
 );
-/*----------------------------------*/
 
 
 
-
-/*----------------------------------*/
-/*----------------------------------*/ (II)
+/*----------------------------------*/ (IV)
 //?? (HTML)------------------
 <!doctype html>
 <html>
@@ -117,3 +112,35 @@ ReactDOM.render(
     <p>My first React content</p>,
     document.getElementById("root")
 );
+
+
+
+/*----------------------------------*/ (V) REACT-purple (script.jsx)
+import React from "react";
+import ReactDOM from "react-dom";
+
+ReactDOM.render(
+ <h2>A Case Study on Startup Culture</h2>, 
+ document.getElementById("article")
+);
+// Above, what is expected to render with this setup in React?
+=> An <h2> inside the "article" element
+
+
+
+
+/*----------------------------------*/ (VI) REACT-purple (script.jsx)
+import React from "react";
+import ReactDOM from "react-dom";
+
+ReactDOM.render(
+ <button>Beam me up, Scotty</button>,
+ document.getElementById("panel")
+);
+// Above, which HTML tags do we need to include in index.html for this React app to work?
+=> <div id="panel">...</div>
+
+
+
+
+
