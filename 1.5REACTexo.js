@@ -2,9 +2,9 @@
 /*----------------------------------*/
 /*----------------------------------*/ (I) //! EXO
 // where will the React content be rendered in "index.html"?
-//! below <p>, above <footer>   // ANSWER TO CHOOSE
+// below <p>, above <footer>   // ANSWER TO CHOOSE
 
-//?? (HTML) (index.html)------------------
+// (HTML) (index.html)------------------
 <!doctype html>
 <html>
     <head>
@@ -21,7 +21,7 @@
     </body>
 </html>
 
-//?? (REACT) (index.jsx)------------------
+// (REACT) (index.jsx)------------------
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -36,14 +36,12 @@ ReactDOM.render(
 
 
 
-
-
 /*----------------------------------*/
 /*----------------------------------*/ (II) //! EXO
 // according to the code below, what data is passed to the "src" ATTRIBUTE of "myImage"
 // "http://mimo.app/i/sandals.png"
 
-//?? (REACT) (script.jsx)------------------
+// (REACT) (script.jsx)------------------
 const imageSrc = "http://mimo.app/i/sandals.png";
  
 const imageAlt = "Socks with Sandals";
@@ -58,13 +56,11 @@ const myImage = (
 
 
 
-
-
 /*----------------------------------*/
 /*----------------------------------*/ (III) //! EXO
 // const header
 
-//?? (HTML) (index.html)------------------
+// (HTML) (index.html)------------------
 <!doctype html>
 <html>
     <head>
@@ -81,7 +77,7 @@ const myImage = (
     </body>
 </html>
 
-//?? (REACT) (index.jsx)------------------
+// (REACT) (index.jsx)------------------
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -94,14 +90,12 @@ ReactDOM.render(
 
 
 
-
-
 /*----------------------------------*/
 /*----------------------------------*/ (IV) //! EXO
 // EMBEDDED EXPRESSIONS 
 // use an Embedded Expression to make sure that "name" and "dob" are rendered inside of "<div>
 
-//?? (HTML) (index.html)------------------
+// (HTML) (index.html)------------------
 <!doctype html>
 <html>
     <head>
@@ -114,8 +108,7 @@ ReactDOM.render(
     </body>
 </html>
 
-
-//?? (REACT) (index.jsx)------------------
+// (REACT) (index.jsx)------------------
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -139,13 +132,11 @@ ReactDOM.render(
 
 
 
-
-
 /*----------------------------------*/
 /*----------------------------------*/ (V) //! EXO
 // what is wrong witht eh code sample below? 
 
-//?? (REACT) (script.jsx)------------------
+// (REACT) (script.jsx)------------------
 import React from "react";
 
 const App = (props) => {
@@ -173,13 +164,11 @@ const mainApp = (
 
 
 
-
-
 /*----------------------------------*/
 /*----------------------------------*/ (VI) //! EXO
 // const header
 
-//?? (HTML) (index.html)------------------
+// (HTML) (index.html)------------------
 <!doctype html>
 <html>
     <head>
@@ -192,8 +181,7 @@ const mainApp = (
     </body>
 </html>
 
-
-//?? (REACT) (script.jsx)------------------
+// (REACT) (script.jsx)------------------
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -226,13 +214,11 @@ ReactDOM.render(
 
 
 
-
-
 /*----------------------------------*/
 /*----------------------------------*/ (VII) //! EXO
 // be careful =>  React.component
 
-//?? (REACT) (script.jsx)------------------
+// (REACT) (script.jsx)------------------
 import React from "react";
 
 class App extends React.Component {  //!
@@ -248,8 +234,6 @@ class App extends React.Component {  //!
 
 
 
-
-
 /*----------------------------------*/
 /*----------------------------------*/ (VIII) //! EXO
 // CLASS COMPONENT => //!  class App extends React.Component {}
@@ -258,7 +242,7 @@ class App extends React.Component {  //!
 // the DIFFERENCE about "props" between Class Components and Functional Components is:
 // Class Components use //!  THIS.PROPS
 
-//?? (REACT) (index.jsx)------------------
+// (REACT) (index.jsx)------------------
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -283,13 +267,11 @@ ReactDOM.render(
 
 
 
-
-
 /*----------------------------------*/
 /*----------------------------------*/ (IX) //! EXO
 // pass "userData" into "App by referencing the values inside "this.props.userData" with the appropriate VARIABLES
 
-//?? (HTML) (index.html)------------------
+// (HTML) (index.html)------------------
 <!doctype html>
 <html>
     <head>
@@ -305,8 +287,7 @@ ReactDOM.render(
     </body>
 </html>
 
-
-//?? (REACT) (script.jsx)------------------
+// (REACT) (script.jsx)------------------
 import React from "react";
 import ReactDOM from "react-dom";
 
