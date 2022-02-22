@@ -193,7 +193,7 @@ from LIVIA:
 // "const App only has 3 attributes listed/used: {{props.search}}, {{props.category}}, {{props.page}}
 // the data is coming in via the <App atttributes, we have 4 attributes
 // but we use only 3 in the template
-// so here, 4 data attributes passed, and 3 of thems used
+// so here, 4 data attributes passed, and 3 of them used
 
 //?? (REACT) (script.jsx)------------------
 import React from "react";
