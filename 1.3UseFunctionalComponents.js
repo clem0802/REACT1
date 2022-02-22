@@ -5,8 +5,7 @@
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (I)
-//! FUNCTIONAL COMPONENT
+/*----------------------------------*/ (I) FUNCTIONAL COMPONENT
 // FUNCTIONAL COMPONENTs are special FUNCTIONs that return JSX elements
 // the function "App" below is a FUNCTIONAL COMPONENT
 // these components work differently than normal JavaScript functions
@@ -29,8 +28,7 @@ const App = () => {
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (II)
-//! FUNCTIONAL COMPONENT
+/*----------------------------------*/ (II) FUNCTIONAL COMPONENT
 // now we have created a functional component, we can //! RENDER it with JSX markup
 // to render the "App" component, code //!  <App />
 // React applications normally name their topmost component as "App"
@@ -53,8 +51,7 @@ var element = <App />;  //!
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (III)
-//! FUNCTIONAL COMPONENT
+/*----------------------------------*/ (III) FUNCTIONAL COMPONENT
 // we can also specify unique component values and pass them as JSX attributes 
 // like in this example with  //!   name = "Sarah Smith"
 
@@ -73,9 +70,7 @@ var element = <App name = "Sarah Smith" />;  //!
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (IV)
-//! FUNCTIONAL COMPONENT
-//! PROPS
+/*----------------------------------*/ (IV) FUNCTIONAL COMPONENT (PROPS)
 // to access values passed via JSX attributes, we need to add the ARGUMENT "props" to the functional component
 // "PROPS" is a common KEYWORD used across all components
 // all components have their own  //!  "props"
@@ -95,9 +90,7 @@ var element = <App name = "Sarah Smith" />;
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (V)
-//! FUNCTIONAL COMPONENT
-//! PROPS.NAME
+/*----------------------------------*/ (V) FUNCTIONAL COMPONENT (PROPS.NAME)
 // with "props" we can access any JSX attributes we have passed along by typing "props" 
 // this "PROPS" followed by a period (.) and the ATTRIBUTE NAME
 // below, we have replaced "Sarah Smith" from the "App" component with  //!   "PROPS.NAME"
@@ -117,9 +110,7 @@ var element = <App name = "Sarah Smith" />;
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (VI)
-//! FUNCTIONAL COMPONENT
-//! PROPS.NAME
+/*----------------------------------*/ (VI) FUNCTIONAL COMPONENT (PROPS.NAME)
 // REACT apps usually name the topmost component as "App", similar to "index.html" for websites
 // this App COMPONENT contains the starting point for any JSX rendered on the browser
 // code "App"
@@ -161,8 +152,7 @@ ReactDOM.render(
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (VII)
-//! PROPS (compared with VIII, below)
+/*----------------------------------*/ (VII) PROPS (compared with VIII, below)
 // how many JSX attributes are passed to "PROPS"?
 //! 4 
 
@@ -195,8 +185,7 @@ ReactDOM.render(   //! 4 JSX attributes are passed to "PROPS"
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (VIII) (with LIVIA)
-//! PROP (compared with VII, above)
+/*----------------------------------*/ (VIII) (with LIVIA) PROP (compared with VII, above)
 // how may "prop" values is "App" using => 3
 from LIVIA:
 // first we set the "TEMPLATE", then we send in the "DATA"
