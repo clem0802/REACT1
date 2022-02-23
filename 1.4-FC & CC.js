@@ -133,16 +133,22 @@ ReactDOM.render(
  document.getElementById("button")
 );
 
-/*----------------------------------*/ (2) "Class Components":
+
+/*----------------------------------------------------------------------------------------------*/
+/*----------------------------------*/
+/*----------------------------------*/ (2.11) "Class Components":
 -> are meant to work for "more complicated behavior" when needed
 -> Class Components are built with "classes" 
 -> "classes" are templates for objects that hold onto info that can change over time
+-> Class Components store "DATA" over time in the component
+-> every Class Component need a render() function because it outputs the component's JSX 
+-> Which difference about props between Class Components and Functional Components is correct?
+   => class components use "this.props"
+-> class App extends React.Component {}  // (CROQUIS of "Class Component App")
 
 
 
-     
-/*----------------------------------*/
-/*----------------------------------*/ (II) CLASS COMPONENT (ok)
+/*----------------------------------*/ (2.12) CLASS COMPONENT (ok)
 extends React.Component {}
 // creating Class Components is similar to creating JavaScript CLASSES
 // Class Components are CLASSES that store DATA over time
@@ -179,7 +185,7 @@ class Counter extends React.Component {
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (II) CLASS COMPONENT (ok)
+/*----------------------------------*/ (2.13) CLASS COMPONENT (ok)
 render(){} => is a METHOD
 // class components need an internal   render() FUNCTION
 // this render() function returns the JSX elements the component should create
@@ -223,7 +229,7 @@ ReactDOM.render(
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (III) CLASS COMPONENT ??
+/*----------------------------------*/ (2.14) CLASS COMPONENT ??
 render()
 // within constructor(props) we need to CALL super(props)
 // similar to how we use super() and consturctor() in NORMAL CLASSES
@@ -269,11 +275,11 @@ ReactDOM.render(
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (IV) CLASS COMPONENT (ok)
+/*----------------------------------*/ (2.15) CLASS COMPONENT (ok) / "CONSTRUCTOR(props)" & "SUPER(props)"
 constructor(props) {}
 // render() doesn't accept any arguments, so we cannot pass "props" to it like with Functional Components
 // instead, we first need to pass "props" through a "constructor()" FUNCTION => constructor(props) {}
-// a class component use "props" with "constructor(props)" & "super(props)"
+// a class component use "props" with "CONSTRUCTOR(props)" & "SUPER(props)"
 
 // (REACT) (script.jsx)------------------
 import React from "react";
@@ -301,7 +307,7 @@ ReactDOM.render(
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (V) CLASS COMPONENT ??
+/*----------------------------------*/ (2.16) CLASS COMPONENT ??
 constructor(props)
 //! super(props)
 // within constructor(props) we need to CALL super(props)
@@ -349,7 +355,7 @@ ReactDOM.render(
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (VI) CLASS COMPONENT (ok)
+/*----------------------------------*/ (2.17) CLASS COMPONENT (ok)
 
 // (HTML) (index.html)------------------
 <!doctype html>
@@ -404,7 +410,7 @@ ReactDOM.render(
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (VII) CLASS COMPONENT (ok)
+/*----------------------------------*/ (2.18) CLASS COMPONENT (ok)
 THIS.PROPS. =>  this.props.name
 // with super(props) added we can now use "props" by typing "this.props" inside the RENDER()
 // here, we can type "this.props.name" to refer to the string value "Sara Smith"
@@ -451,7 +457,7 @@ ReactDOM.render(
 
 
 /*----------------------------------*/
-/*----------------------------------*/ (VIII) CLASS COMPONENT (ok)
+/*----------------------------------*/ (2.19) CLASS COMPONENT (ok)
 THIS.PROPS. =>  this.props.name
 
 // (HTML) (index.html)------------------
@@ -496,3 +502,43 @@ ReactDOM.render(
     <App url="https://getmimo.com" />,
     document.getElementById("root")
 );
+
+
+
+/*----------------------------------*/ (2.21) CLASS COMPONENT (ok)
+// (REACT) (index.jsx)--------------
+// Look at the code below. What will the component Fig display when rendered?
+// => NOTHING. Fig isn't set up to use props and its attributes are empty
+import React from "react";
+import ReactDOM from "react-dom";
+
+class Fig extends React.Component {
+ render() {
+  return (
+   <div>
+    <img src={this.props.url} />
+    <p>{this.props.caption}</p>
+   </div>
+  );
+ }
+}
+
+ReactDOM.render(
+ <Fig 
+  url="" 
+  caption="" 
+ />,
+ document.getElementById("root")
+);
+
+
+
+/*----------------------------------*/ (2.22) CLASS COMPONENT 
+// (REACT) (index.jsx)--------------
+// Complete the Class Component App below such that it extends "React.Component"
+import React from "react";
+export default class App extends React.Component {}
+                         ^^^^^^^^^^^^^^^^^^^^^^^
+
+                           
+                           
